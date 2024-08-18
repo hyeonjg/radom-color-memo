@@ -1,20 +1,56 @@
 <!DOCTYPE html>
 <html>
-	<head>
+<head>
+	<title>웹 랜덤 메모지</title>
+	<link href='style.css' rel='stylesheet' type='text/css'>
 
-		<title>title</title>
-		<script src="jquery-3.7.1.min.js"></script> 
-		<script src=''></script>
-
-	</head>
-	<body>
-		
-		<p>hello</p>
-
-	</body>
-	<script type="text/javascript">
-		
-
-		
+	<script defer src="./memojs/jquery-3.7.1.min.js"></script> 
+	<script defer src='./memojs/dom-to-image-master/src/dom-to-image.js'>
 	</script>
+	<script defer src='./memojs/FileSaver.js-master/src/FileSaver.js'>
+	</script>
+	<script defer src='./memojs/textbox.js'></script>
+	<script defer src='./memojs/save.js'></script>
+	<script defer src='./memojs/date.js'></script>
+	<script defer src='./memojs/background.js'></script>
+	<!-- defer이 붙은 요소는 body가 전부 출력된 후 실행된다.-->
+</head>
+<body>
+	
+	<!--입력창-->
+	<div class='wrap t-center'>
+		<div class='space'></div>
+
+		<h1>랜덤 컬러 웹 메모지</h1>
+
+		<div>
+		<input type='radio' name='font' id='font' value='gothic'>고딕
+		<input type='radio' name='font' id='font' value='serif'>바탕
+		<input type='radio' name='font' id='font' value='hand'>손글씨
+		<input type='radio' name='font' id='font' value='hand2'>손글씨2
+		</div>
+
+		<div>
+		<input type='radio' name='align' id='align' value='left'>left
+		<input type='radio' name='align' id='align' value='center'>center
+		<input type='radio' name='align' id='align' value='right'>right
+		</div>
+
+		<div>
+		<input type='range' name='size' id='size' 
+		min='20' max='50' step='1'value='35'>
+		</div>
+
+		<div id='memoarea'>
+		<form>
+			<textarea id='textbox' rows='20' cols='100'></textarea>
+			<div id='clock'></div>
+		</form>
+		</div>
+
+		<button type='button' id='capture'>캡쳐</button>
+	</div>
+
+
+</body>
 </html>
